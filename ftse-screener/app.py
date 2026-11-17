@@ -47,6 +47,10 @@ def load_data():
     table = companies.merge(fundamentals, on="ticker").merge(metrics, on="ticker")
     return table
 
+@st.cache_data(ttl=3600)
+def load_history(ticker):
+    return yf.Ticker(ticker).history(period="2y")["Close"]
+
 
 # ---------- Step 2: Score the companies ----------
 def score_companies(table, weights):
@@ -72,15 +76,21 @@ def score_companies(table, weights):
 # ---------- Step 3: Build the page ----------
 with st.spinner("Downloading market data..."):
     table = load_data()
+    
+st.sidebar.header("Filters")
+sectors = st.sidebar.multiselect("Sectors (leave empty for all)", sorted(table["sector"].unique()))
+if sectors:
+    table = table[table["sector"].isin(sectors)] 
 
 st.sidebar.header("How much does each factor matter?")
 weights = {
+    "div_yield": st.sidebar.slider("Income (dividend yield)", 0, 10, 0),
     "pe": st.sidebar.slider("Value (low P/E)", 0, 10, 5),
     "roe": st.sidebar.slider("Quality (high ROE)", 0, 10, 5),
     "ret_12m": st.sidebar.slider("Momentum (12m return)", 0, 10, 3),
     "vol_1y": st.sidebar.slider("Low volatility", 0, 10, 2),
 }
-weights = {name: w for name, w in weights.items() if w > 0}  # ignore sliders set to 0
+weights = { name: w for name, w in weights.items() if w > 0}  # ignore sliders set to 0
 
 if weights:
     table["score"] = score_companies(table, weights)
@@ -91,7 +101,19 @@ else:
     columns = ["name", "sector", "pe", "roe", "ret_12m", "vol_1y"]
 
 st.subheader("Ranked companies")
-st.dataframe(table[columns], use_container_width=True)
+st.dataframe(
+    table[columns].style.format(
+        {"pe": "{:.1f}", "roe": "{:.1%}", "ret_12m": "{:.1%}", "vol_1y": "{:.1%}"},
+        na_rep="-",
+    ),
+    use_container_width=True,)
+
+st.download_button(
+"Download results as CSV",
+table[columns].to_csv(index=False),
+file_name="ftse_screen.csv",
+mime="text/csv",   
+)
 
 st.subheader("Risk vs return")
 chart = px.scatter(
@@ -99,3 +121,13 @@ chart = px.scatter(
     hover_name="name", labels={"vol_1y": "Volatility", "ret_12m": "12-month return"},
 )
 st.plotly_chart(chart, use_container_width=True)
+
+st.subheader("Company deep dive")
+choice = st.selectbox("Pick a company", table["name"])
+ticker = table.loc[table["name"] == choice, "ticker"].iloc[0]
+history = load_history(ticker)
+
+chart_data = history.to_frame("Price")
+chart_data["50-day average"] = history.rolling(50).mean()
+chart_data["200-day average"] = history.rolling(200).mean()
+st.line_chart(chart_data)
