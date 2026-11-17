@@ -1,11 +1,101 @@
 ticker,name,sector
+III.L,3i,Financials
+ADM.L,Admiral Group,Financials
+AAF.L,Airtel Africa,Telecoms & Media
+ALW.L,Alliance Witan,Investment Trusts
+AAL.L,Anglo American,Materials
+ANTO.L,Antofagasta,Materials
+ABF.L,Associated British Foods,Consumer Staples
 AZN.L,AstraZeneca,Healthcare
-HSBA.L,HSBC,Financials
-SHEL.L,Shell,Energy
-ULVR.L,Unilever,Consumer Staples
-BP.L,BP,Energy
-GSK.L,GSK,Healthcare
-RIO.L,Rio Tinto,Materials
-DGE.L,Diageo,Consumer Staples
-LLOY.L,Lloyds Banking Group,Financials
+AUTO.L,Auto Trader Group,Telecoms & Media
+AV.L,Aviva,Financials
+BAB.L,Babcock International,Industrials
+BA.L,BAE Systems,Industrials
 BARC.L,Barclays,Financials
+BTRW.L,Barratt Redrow,Consumer Discretionary
+BEZ.L,Beazley,Financials
+BKG.L,Berkeley Group,Consumer Discretionary
+BP.L,BP,Energy
+BATS.L,British American Tobacco,Consumer Staples
+BLND.L,British Land,Real Estate
+BT-A.L,BT Group,Telecoms & Media
+BNZL.L,Bunzl,Industrials
+BRBY.L,Burberry,Consumer Discretionary
+CNA.L,Centrica,Utilities
+CCEP.L,Coca-Cola Europacific Partners,Consumer Staples
+CCH.L,Coca-Cola HBC,Consumer Staples
+CPG.L,Compass Group,Consumer Discretionary
+CTEC.L,Convatec,Healthcare
+CRDA.L,Croda International,Materials
+DCC.L,DCC,Industrials
+DGE.L,Diageo,Consumer Staples
+DPLM.L,Diploma,Industrials
+EDV.L,Endeavour Mining,Materials
+ENT.L,Entain,Consumer Discretionary
+EXPN.L,Experian,Industrials
+FCIT.L,F&C Investment Trust,Investment Trusts
+FRES.L,Fresnillo,Materials
+GAW.L,Games Workshop,Consumer Discretionary
+GLEN.L,Glencore,Materials
+GSK.L,GSK,Healthcare
+HLN.L,Haleon,Healthcare
+HLMA.L,Halma,Technology
+HSX.L,Hiscox,Financials
+HWDN.L,Howdens Joinery,Consumer Discretionary
+HSBA.L,HSBC,Financials
+ICG.L,ICG,Financials
+IGG.L,IG Group,Financials
+IHG.L,InterContinental Hotels Group,Consumer Discretionary
+IMI.L,IMI,Industrials
+IMB.L,Imperial Brands,Consumer Staples
+INF.L,Informa,Telecoms & Media
+IAG.L,International Airlines Group,Consumer Discretionary
+ITRK.L,Intertek,Industrials
+JD.L,JD Sports Fashion,Consumer Discretionary
+BGEO.L,Lion Finance Group,Financials
+KGF.L,Kingfisher,Consumer Discretionary
+LAND.L,Land Securities,Real Estate
+LGEN.L,Legal & General,Financials
+LLOY.L,Lloyds Banking Group,Financials
+LMP.L,LondonMetric Property,Real Estate
+LSEG.L,London Stock Exchange Group,Financials
+MNG.L,M&G,Financials
+MKS.L,Marks & Spencer,Consumer Discretionary
+MRO.L,Melrose Industries,Industrials
+MTLN.L,Metlen Energy & Metals,Industrials
+MNDI.L,Mondi,Materials
+NG.L,National Grid,Utilities
+NWG.L,NatWest Group,Financials
+NXT.L,Next,Consumer Discretionary
+PSON.L,Pearson,Telecoms & Media
+PSH.L,Pershing Square Holdings,Investment Trusts
+PSN.L,Persimmon,Consumer Discretionary
+PCT.L,Polar Capital Technology Trust,Investment Trusts
+PRU.L,Prudential,Financials
+RKT.L,Reckitt,Consumer Staples
+REL.L,RELX,Telecoms & Media
+RTO.L,Rentokil Initial,Industrials
+RMV.L,Rightmove,Telecoms & Media
+RIO.L,Rio Tinto,Materials
+RR.L,Rolls-Royce Holdings,Industrials
+SGE.L,Sage Group,Technology
+SBRY.L,Sainsbury's,Consumer Staples
+SDR.L,Schroders,Financials
+SMT.L,Scottish Mortgage Investment Trust,Investment Trusts
+SGRO.L,Segro,Real Estate
+SVT.L,Severn Trent,Utilities
+SHEL.L,Shell,Energy
+SMIN.L,Smiths Group,Industrials
+SN.L,Smith & Nephew,Healthcare
+SPX.L,Spirax Group,Industrials
+SSE.L,SSE,Utilities
+STAN.L,Standard Chartered,Financials
+SDLF.L,Standard Life,Financials
+STJ.L,St. James's Place,Financials
+TSCO.L,Tesco,Consumer Staples
+BBOX.L,Tritax Big Box REIT,Real Estate
+ULVR.L,Unilever,Consumer Staples
+UU.L,United Utilities,Utilities
+VOD.L,Vodafone Group,Telecoms & Media
+WEIR.L,Weir Group,Industrials
+WTB.L,Whitbread,Consumer Discretionary
