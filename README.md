@@ -1,4 +1,5 @@
 FTSE 100 Screener
+This is the full list taken from the FTSE Russell constituents as of the March 2026 review
 
 A Python web app that ranks FTSE 100 companies using a weighted score of value (P/E), quality (ROE), momentum (12-month return) and low volatility.
 
